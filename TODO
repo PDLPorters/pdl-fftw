@@ -1,0 +1,6 @@
+- Add PDL::FFTW docs to pdldoc database
+- Add any needed META information
+- Add the appropriate dependencies on PDL
+- Rreview of top level PDL Makefilee.PL for other issues
+- Stand up repository on sf.net
+- Ensure correct info for repo and support are present
