@@ -1,0 +1,7 @@
+Changes
+fftw.pd
+Makefile.PL
+MANIFEST			This list of files
+MANIFEST.SKIP
+README
+t/fftw.t

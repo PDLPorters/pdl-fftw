@@ -1,0 +1,6 @@
+^typespec
+^\.git
+~$
+Makefile$
+Makefile.old$
+MANIFEST.bak$
