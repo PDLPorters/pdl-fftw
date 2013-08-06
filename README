@@ -1,5 +1,5 @@
-PDL-FFTW version 2.016
-======================
+PDL-FFTW
+========
 
 This module provides bindings to the FFTW version 2.x library
 (the original API).  It was originally part of the PDL distribution

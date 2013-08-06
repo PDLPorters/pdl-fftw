@@ -4,3 +4,5 @@
 Makefile$
 Makefile.old$
 MANIFEST.bak$
+^PDL-FFTW.*\.tar\.gz$
+^TODO$

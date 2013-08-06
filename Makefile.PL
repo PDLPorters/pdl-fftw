@@ -167,11 +167,32 @@ close F;
 @pack = (["fftw.pd",FFTW,PDL::FFTW]);
 %hash = pdlpp_stdargs(@::pack);
 $hash{INC} .= " -I".join(' -I',@FFTW_inc_locations);
-$hash{clean}->{FILES} .= ' typespec';
+$hash{VERSION_FROM} = 'fftw.pd';
+$hash{clean}->{FILES} .= ' typespec MANIFEST.bak';
 push @{$hash{LIBS}},"-lm -L".join(" -L",@FFTW_lib_locations)." $lib";
+$hash{PREREQ_PM} = { 'PDL' => 2.004, };
+$hash{META_MERGE} = {
+   resources => {
+      homepage => 'http://pdl.perl.org/',
+      bugtracker  => 'http://sourceforge.net/p/pdl/bugs/',
+      repository  => {
+         url => 'git://git.code.sf.net/p/pdl/pdl-fftw',
+         type => 'git',
+         web => 'http://sourceforge.net/p/pdl/pdl-fftw/ci/master/tree/',
+      },
+   },
+};
+
 WriteMakefile(%hash);
 
 
 sub MY::postamble {
-   pdlpp_postamble(@::pack);
+   my $pdlpp_post = pdlpp_postamble(@::pack);
+   my $text = <<"FOO";
+install ::
+\t\@echo "Updating PDL documentation database...";
+\t\@\$(PERL) -e "use PDL::Doc; eval { PDL::Doc::add_module(q{PDL::FFTW}); }; ";
+
+FOO
+   return $pdlpp_post . $text;
 }  # Add genpp rule                             

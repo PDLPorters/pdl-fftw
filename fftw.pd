@@ -3,6 +3,9 @@
 # docs improvement
 # use PDL::Complex?
 
+our $VERSION = '2.016_01';
+pp_setversion(qq{'$VERSION'});
+
 require 'typespec';
 
 pp_addpm({At=>'Top'},<<'EOD');
