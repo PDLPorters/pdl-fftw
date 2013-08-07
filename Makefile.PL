@@ -109,13 +109,19 @@ elsif ($found_double ne 'none' && $want_double ) {
 
 if ( $donot )   {
    $msg .= "\n Skipping build of PDL::FFTW.\n";
+   $elaborate = 0;
 
    # maybe we found something, but it wasn't what was wanted...
    if ( $found_double ne 'none' )
-   { $msg .= "Found double version, wanted float!\n" }
+   { $msg .= "Found double version, wanted float!\n"; $elaborate++ }
 
    if ( $found_float ne 'none' )
-   { $msg .= "Found float version, wanted double!\n" }
+   { $msg .= "Found float version, wanted double!\n"; $elaborate++ }
+
+   unless ( $elaborate )
+   { $msg .= " In the Makefile.PL try adding the location of the FFTW2 header and\n" .
+             " library to \@FFTW_inc_locations and \@FFTW_lib_locations (respectively).\n" }
+
 }
 
 if ($msg ne "") {
