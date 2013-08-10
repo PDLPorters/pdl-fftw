@@ -180,11 +180,13 @@ $hash{PREREQ_PM} = { 'PDL' => 2.004, };
 $hash{META_MERGE} = {
    'resources' => {
       'homepage' => 'http://pdl.perl.org/',
-      'bugtracker'  => 'http://sourceforge.net/p/pdl/bugs/',
+      'bugtracker'  => {
+         'web' => 'http://sourceforge.net/p/pdl/bugs/',
+      },
       'repository'  => {
          'url' => 'git://git.code.sf.net/p/pdl/pdl-fftw',
-         'type' => 'git',
          'web' => 'http://sourceforge.net/p/pdl/pdl-fftw/ci/master/tree/',
+         'type' => 'git',
       },
    },
 };
