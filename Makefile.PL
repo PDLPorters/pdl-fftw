@@ -182,7 +182,7 @@ $hash{META_MERGE} = {
    'provides' => {
       'PDL::FFTW' => {
          'file' => 'fftw.pd',
-         'version' => '2.019',
+         'version' => '2.019_01',
       },
    },
    'resources' => {
