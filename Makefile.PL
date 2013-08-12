@@ -179,14 +179,23 @@ push @{$hash{LIBS}},"-lm -L".join(" -L",@FFTW_lib_locations)." $lib";
 $hash{CONFIGURE_REQUIRES} = { 'PDL' => 2.004, };
 $hash{BUILD_REQUIRES} = { 'PDL' => 2.004, };
 $hash{PREREQ_PM} = { 'PDL' => 2.004, };
+$hash{CONFIGURE_REQUIRES} = { 'PDL' => 2.004, };
 $hash{META_MERGE} = {
+   'provides' => {
+      'PDL::FFTW' => {
+         'file' => 'fftw.pd',
+         'version' => '2.019_01',
+      },
+   },
    'resources' => {
       'homepage' => 'http://pdl.perl.org/',
-      'bugtracker'  => 'http://sourceforge.net/p/pdl/bugs/',
+      'bugtracker'  => {
+         'web' => 'http://sourceforge.net/p/pdl/bugs/',
+      },
       'repository'  => {
          'url' => 'git://git.code.sf.net/p/pdl/pdl-fftw',
-         'type' => 'git',
          'web' => 'http://sourceforge.net/p/pdl/pdl-fftw/ci/master/tree/',
+         'type' => 'git',
       },
    },
 };
