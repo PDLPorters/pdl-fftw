@@ -1,2 +1,0 @@
-Fix META.json generation problem which is dropping the
-repository information from the generated output.
