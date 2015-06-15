@@ -1,56 +1,19 @@
 PDL-FFTW
 ========
 
-This module provides bindings to the FFTW version 2.x library
-(the original API) and has been removed from the PDL main
-distribution and has been deprecated. It is provided only for
-continuity until the coming release of PDL::FFTW3. At that time
-it will be obsolete.
+The the PDL::FFTW module provides bindings to the FFTW
+version 2.x library (the original API) which is now obsolete.
+PDL::FFTW3 provides the bindings to the current FFTW3 API.
 
-
-DEPENDENCIES
-
-This module requires these other modules and libraries:
-
-This module needs the perl PDL module and the FFTW library
-version 2 installed.  FFTW is a free C FFT library including
-multi-dimensional, real, and parallel transforms.
-See http://www.fftw.org/ for the sources and directions
-for how to build the module.
-
-This module is not compatible with the current FFTW3 API.
-
-
-CONFIGURATION OPTIONS
-
-Please edit the fftw.conf file to change the configuration
-options repeats from that file here for convenience:
-
-   # Location to search for the FFTW libs, overrides default if defined
-   FFTW_LIBS => undef,    # [ '/lib','/usr/lib','/usr/local/lib'],
-   
-   # Location to find FFTW includes, overrides default if defined
-   FFTW_INC => undef,     # ['/usr/include/','/usr/local/include'],
-   
-   # FFTW Numeric Precision Type to link in: (double or single precision)
-   FFTW_TYPE => 'double', # 'single'
-
-
-INSTALLATION
-
-To install this module type the following:
-
-   perl Makefile.PL
-   make
-   make test
-   make install
-
+This distribution only exists to inform potential users of
+this fact and to direct them to versions of the module on
+BackPAN at http://backpan.perl.org/authors/id/C/CH/CHM/
 
 
 COPYRIGHT AND LICENCE
 
 Copyright (C) 1999 Christian Pellegrin, 2000 Christian Soeller,
-and 2013 Chris Marshall.
+and 2015 Chris Marshall.
 
 All rights reserved. There is no warranty.  This library is free
 software; you can redistribute it and/or modify it under the same

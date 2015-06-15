@@ -1,5 +1,12 @@
 Revision history for Perl extension PDL::FFTW.
 
+2.023  2015-06-15 17:17:17 EDT
+
+ - PDL::FFTW now is documentation only for
+   searchability and to inform users of the
+   PDL::FFTW3 or, if needed, a link to the
+   previous versions on backpan.
+
 2.022  2013-12-14 14:19:47 EST
 
  - Fix missing version in meta data
