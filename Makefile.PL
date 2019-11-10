@@ -37,6 +37,15 @@ my $distmeta = {
          'version' => '2.024',
       },
    },
+   resources => {
+      bugtracker => 'https://github.com/PDLPorters/pdl-fftw/issues',
+      repository  => {
+         url => 'git://github.com/PDLPorters/pdl-fftw.git',
+         type => 'git',
+         web => 'https://github.com/PDLPorters/pdl-fftw',
+      },
+   },
+   x_IRC => 'irc://irc.perl.org/#pdl',
 };
 
 $hash{NAME} = 'PDL::FFTW';
